@@ -791,6 +791,20 @@
     color: var(--color-text-primary);
 }
 
+.guide-note {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-hint);
+    background-color: var(--color-primary-light);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.btn-reset-guide {
+    font-size: var(--font-size-xs);
+    margin-top: var(--spacing-xs);
+}
+
 /* 测验模式样式 */
 .quiz-panel {
     position: fixed;

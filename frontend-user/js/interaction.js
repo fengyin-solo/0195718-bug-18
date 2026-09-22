@@ -172,8 +172,8 @@ class InteractionManager {
     }
     
     bindHelpEvents() {
+        // 帮助入口：只展示引导（温习），不改动完成状态
         document.getElementById('btn-help').addEventListener('click', () => {
-            Storage.resetGuide();
             window.dispatchEvent(new CustomEvent('showGuide'));
         });
         
