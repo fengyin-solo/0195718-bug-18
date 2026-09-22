@@ -104,9 +104,21 @@
     </div>
 
     <!-- 欢迎引导遮罩 -->
-    <div id="guide-overlay" class="guide-overlay hidden">
+    <div id="guide-overlay" class="guide-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="guide-title">
         <div class="guide-modal">
+            <div class="guide-modal-header">
+                <h2 id="guide-title">使用引导</h2>
+                <button class="btn btn-icon" id="btn-close-guide" type="button" aria-label="关闭引导">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
             <div class="guide-content">
+                <div class="guide-view-note hidden" id="guide-view-note">
+                    正在查看引导说明，关闭或重新浏览不会改变已保存的引导状态。
+                </div>
                 <div class="guide-welcome" id="guide-welcome">
                     <div class="guide-icon">🔬</div>
                     <h2>欢迎来到光学设计实验室</h2>
@@ -154,6 +166,13 @@
                     <button class="btn btn-primary" id="btn-finish-guide">开始探索</button>
                 </div>
             </div>
+            <div class="guide-footer">
+                <div class="guide-storage-status" id="guide-storage-status">引导完成状态保存在本地存储中</div>
+                <div class="guide-footer-actions">
+                    <button class="btn btn-secondary btn-sm" id="btn-copy-recovery-link" type="button">复制恢复链接</button>
+                    <button class="btn btn-text btn-sm" id="btn-reset-guide" type="button">重置引导</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -174,7 +193,7 @@
                     </svg>
                     <span>测验模式</span>
                 </button>
-                <button class="btn btn-icon" id="btn-help" title="查看引导">
+                <button class="btn btn-icon" id="btn-help" type="button" title="查看使用引导（不会改变引导状态）" aria-label="查看使用引导">
                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="10"/>
                         <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>

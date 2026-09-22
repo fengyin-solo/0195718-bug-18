@@ -173,7 +173,6 @@ class InteractionManager {
     
     bindHelpEvents() {
         document.getElementById('btn-help').addEventListener('click', () => {
-            Storage.resetGuide();
             window.dispatchEvent(new CustomEvent('showGuide'));
         });
         
